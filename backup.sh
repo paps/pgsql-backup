@@ -35,7 +35,7 @@ mkdir -v dump
 for db in "${database[@]}"
 do
 
-    dumpFile="pgsql-$db-`date '+%a-%Hh'`.pgsql"
+    dumpFile="$db-`date '+%a-%Hh'`.pgsql"
 
     echo "Dumping database $db to dump/${dumpFile}..."
     pg_dump --file=dump/$dumpFile --format=custom $database
