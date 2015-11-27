@@ -1,0 +1,37 @@
+# Which databases to dump
+database[0]=''
+# database[1]=''
+# database[2]=''
+# ...
+
+backupName=''
+
+# Weekly emails for monitoring
+# sendgrid must be enabled for this to work
+# choose a day and hour that will match the output of the `date` command when cron launches the backup script
+weeklyMailEnabled=0
+weeklyMailDay='Sun' # as returned by `date +%a` (Sun, Mon, ...)
+weeklyMailHour='13' # as returned by `date +%H` (24h format: 00..23)
+
+# Sendgrid
+# python3 required
+# uses sendgrid.py to send emails
+sendgridEnabled=0
+sendgridFrom='from@example.com'
+sendgridTo='to@example.com'
+sendgridLogin=''
+sendgridPassword=''
+
+# FTP
+# ncftpput required
+ftpEnabled=0
+ftpHost=''
+ftpLogin=''
+ftpPassword=''
+ftpFolder='/pgsql'
+
+# SCP
+# ssh-agent must be loaded with a key that can access the path
+scpEnabled=0
+scpPath=''
+scpSshEnv="$HOME/.ssh/environment-`uname -n`"
