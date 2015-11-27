@@ -38,7 +38,7 @@ do
     dumpFile="$db-`date '+%a-%Hh'`.pgsql"
 
     echo "Dumping database $db to dump/${dumpFile}..."
-    pg_dump --file=dump/$dumpFile --format=custom $database
+    pg_dump --file=dump/$dumpFile --format=custom $db
     success=$?
 
     if [ $success -ne 0 ]
