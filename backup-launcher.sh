@@ -27,6 +27,7 @@ cd $backupDir
 
 logFile="log-`date '+%a-%Hh'`.log"
 touch "$logFile"
+chmod og-r "$logFile"
 if [ ! -w "$logFile" ]
 then
     echo "$logFile is not writable"

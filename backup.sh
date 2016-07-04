@@ -77,6 +77,12 @@ echo ""
 
 rm -fvr dump
 
+echo ""
+echo "mode change:"
+echo ""
+
+chmod -v og-r "$tarFile"
+
 if [ $ftpEnabled -ne 0 ]
 then
     echo ""
