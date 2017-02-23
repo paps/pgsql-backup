@@ -1,5 +1,5 @@
-pgsql-backup ![project-status](http://stillmaintained.com/paps/pgsql-backup.png)
-================================================================================
+pgsql-backup
+============
 
 Shell script for putting `pg_dump` into your crontab.
 
